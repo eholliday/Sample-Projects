@@ -1,0 +1,43 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+<head">
+	<title><?php echo $page_title; ?></title>	
+	<link rel="stylesheet" href="includes/style.css" type="text/css" media="screen" />
+	<link href="style.css" rel="stylesheet" type="text/css" />
+	<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<style type="text/css">
+.auto-style1 {
+	text-align: center;
+}
+</style>
+</head>
+</head>
+
+<body>
+
+	
+	<p class="auto-style1"><img alt="beer" height="318" longdesc="beer" src="includes/beer.jpg" width="960" /></p>
+
+	
+	<div id="header">
+		<h1>Midwest Regional Brewer</h1>
+		<h2>Keeping locals cool...</h2>
+	</div>
+	<div id="navigation">
+		<ul>
+			<li><a href="home_page.php">Home Page</a></li>
+			<li><a href="about_us.php">About Us</a></li>
+			<li><a href="registration.php">Register</a></li>
+			<li><?php // Create a login/logout link:
+if (isset($_SESSION['user_id'])) {
+	echo '<a href="logout.php">Logout</a>';
+} else {
+	echo '<a href="login.php">Login</a>';
+}
+?></li>
+		</ul>
+	</div>
+	<div id="content"><!-- Start of the page-specific content. -->
+<!-- Script 12.10 - header.html -->
